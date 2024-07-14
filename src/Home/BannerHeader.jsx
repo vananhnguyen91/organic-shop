@@ -1,5 +1,5 @@
 import React from "react";
-import "../resources/scss/banner_header.scss";
+import "../resources/scss/header.scss";
 import { Button } from "antd";
 import mingcute_refresh from "../resources/icons/mingcute_refresh-3-line.svg";
 import icons_codefresh from "../resources/icons/simple-icons_codefresh.svg";
@@ -7,41 +7,51 @@ import carbon_delivery from "../resources/icons/carbon_delivery-truck.svg";
 
 export default function BannerHeader() {
   return (
-    <div className="banner_header_container">
-      <div>Organic Foods at your Doorsteps</div>
-      <Button>Start Shopping</Button>
-      <Button>Join us</Button>
-      <div>
-        <div>19k+</div>
-        <div>Variety of Products</div>
-        <div>9k+</div>
-        <div>Happy Customers</div>
-        <div>10+</div>
-        <div>Store Locations</div>
-      </div>
-      <div>
-        <div>
-          <img src={mingcute_refresh} className="App-logo" alt="icon_mnu" />
+    <div class="banner-top-container">
+      <header class="header">
+        <h1>
+          <span className="text-primary highlight">Organic</span> Foods at your{" "}
+          <span class="bold">Doorsteps</span>
+        </h1>
+        <div class="buttons">
+          <Button class="btn btn-green">Start Shopping</Button>
+          <Button class="btn btn-black">Join us</Button>
+        </div>
+        <div class="info">
           <div>
-            <p>Fresh from farm</p>
-            <span>Consectetur adipiscing elit Sagittis sed ptibus</span>
+            <span>19K+</span> Variety of Products
+          </div>
+          <div>
+            <span>9K+</span> Happy Customers
+          </div>
+          <div>
+            <span>10+</span> Store Locations
           </div>
         </div>
-        <div>
-          <img src={icons_codefresh} className="App-logo" alt="icon_mnu" />
+      </header>
+      <section class="features">
+        <div class="feature feature-farm">
+          <img src={mingcute_refresh} alt="mingcute_refresh" />
           <div>
-            <p>100% Organic</p>
-            <span>Consectetur adipiscing elit Sagittis sed ptibus</span>
+            <h2>Fresh From Farm</h2>
+            <span>consectetur adipiscing elit Sagittis sed ptibus</span>
           </div>
         </div>
-        <div>
-          <img src={carbon_delivery} className="App-logo" alt="icon_mnu" />
+        <div class="feature feature-organic">
+          <img src={icons_codefresh} alt="icons_codefresh" />
           <div>
-            <p>Free delivery</p>
-            <span>Consectetur adipiscing elit Sagittis sed ptibus</span>
+            <h2>100% Organic</h2>
+            <span>consectetur adipiscing elit Sagittis sed ptibus</span>
           </div>
         </div>
-      </div>
+        <div class="feature feature-delivery">
+          <img src={carbon_delivery} alt="carbon_delivery" />
+          <div>
+            <h2>Free Delivery</h2>
+            <span>consectetur adipiscing elit Sagittis sed ptibus</span>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

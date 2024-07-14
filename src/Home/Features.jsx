@@ -10,7 +10,7 @@ export default function Features() {
     <div className="flex justify-between ">
       {data.map((item) => {
         return (
-          <div>
+          <div className="" key={item}>
             <div>
               <img src={arcticons_aftership} alt="post_thumb" />
             </div>

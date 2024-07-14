@@ -1,5 +1,5 @@
 import React from "react";
-import vector from "../resources/icons/Vector.svg";
+import arrow_right from "../resources/icons/arrow_right.svg";
 
 export default function PopularCategories() {
   return (
@@ -9,7 +9,7 @@ export default function PopularCategories() {
         <div>
           <span>View All Categories</span>
           <div>
-            <img src={vector} className="vector" alt="vector" />
+            <img src={arrow_right} alt="arrow_right" />
           </div>
         </div>
       </div>

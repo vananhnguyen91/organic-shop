@@ -16,10 +16,10 @@ const { Header, Content } = Layout;
 export default function Home() {
   return (
     <Layout>
-      <Header>
+      <div>
         <HeaderContent />
         <BannerHeader />
-      </Header>
+      </div>
       <Content
         style={{
           margin: "24px 16px",

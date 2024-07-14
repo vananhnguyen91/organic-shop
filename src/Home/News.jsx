@@ -12,7 +12,7 @@ export default function News() {
     <div className="flex ">
       {data.map((item) => {
         return (
-          <div className="flex">
+          <div className="flex" key={item}>
             <div>
               <img src={post_thumb} alt="post_thumb" />
             </div>

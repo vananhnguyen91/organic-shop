@@ -1,0 +1,123 @@
+.header-container {
+    height: 84px;
+    background: #FFF;
+
+    a:active {
+        border-bottom: 3px solid #364127;
+
+    }
+
+    .header-shop-info {
+        height: 61px;
+        padding: 0px 20px;
+        gap: 10px;
+
+        .text-shop {
+            color: #000;
+            font-family: "Khand", sans-serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 500;
+        }
+    }
+
+    .input-search {
+        display: flex;
+        width: 500px;
+        justify-content: center;
+        align-items: center;
+
+        span.ant-input-outlined {
+            border-radius: 10px 0px 0px 10px;
+            border: 1px solid #D8D8D8;
+            background: #F5F5F5;
+
+            box-shadow: unset input {
+                color: #A4A4A4;
+                font-family: "Open Sans", sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+
+        span.ant-input-group-addon>.ant-input-search-button {
+            border-radius: 0px 10px 10px 0px;
+            background: #6BB252;
+            padding: 15px 17px;
+            gap: 10px;
+            width: 92px;
+        }
+    }
+}
+
+.banner-top-container {
+    background: url("../img/banner.jpeg") lightgray 50% / cover no-repeat;
+    height: 729px;
+    display: flex;
+    flex-direction: column;
+
+    .header h1 {
+        color: #111;
+        font-size: 69px;
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: -2.07px;
+
+        .highlight {
+            color: #6BB252;
+            font-weight: 700;
+            letter-spacing: -2.07px;
+        }
+
+        .bold {
+            font-weight: 700;
+            letter-spacing: -2.07px;
+        }
+    }
+
+    .features {
+        margin: 0 auto;
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+        height: 126px;
+        width: 64%;
+    }
+
+    .feature {
+        display: flex;
+        padding: 20px;
+        align-items: flex-start;
+        gap: 20px;
+
+        h2 {
+            color: #FFF;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
+        }
+
+        span {
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 165%;
+            letter-spacing: 0.48px;
+            text-transform: capitalize;
+        }
+    }
+
+    .feature-farm {
+        background-color: #ff5722;
+    }
+
+    .feature-organic {
+        background-color: #4caf50;
+    }
+
+    .feature-delivery {
+        background-color: #8bc34a;
+    }
+
+}
