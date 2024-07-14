@@ -10,20 +10,19 @@ import News from "./Home/News";
 import DownloadApp from "./Home/DownloadApp";
 import Features from "./Home/Features";
 import Footer from "./Home/Footer";
-import { Layout } from "antd";
 import Signup from "./Home/Signup";
-const { Content } = Layout;
 export default function Home() {
   return (
-    <Layout>
-      <div>
+    <div>
+      <div className="header-section">
         <HeaderContent />
         <BannerHeader />
       </div>
-      <Content
+      <div
+        className="body-section"
         style={{
-          margin: "24px 16px",
-          padding: 24,
+          margin: 0,
+          padding: "0px 100px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -42,7 +41,7 @@ export default function Home() {
         <DownloadApp />
         <Features />
         <Footer />
-      </Content>
-    </Layout>
+      </div>
+    </div>
   );
 }

@@ -6,18 +6,18 @@ import carbon_delivery from "../resources/icons/carbon_delivery-truck.svg";
 
 export default function BannerHeader() {
   return (
-    <div class="banner-top-container">
-      <header class="header">
+    <div className="banner-top-container">
+      <header className="header">
         <h1>
           <span className="text-primary highlight">Organic</span> Foods
           <br />
-          at your <span class="bold">Doorsteps</span>
+          at your <span className="bold">Doorsteps</span>
         </h1>
-        <div class="buttons">
+        <div className="buttons">
           <button className="btn-green">Start Shopping</button>
           <button>Join us</button>
         </div>
-        <div class="info">
+        <div className="info">
           <div>
             <span>19K+</span>Variety of Products
           </div>
@@ -29,22 +29,22 @@ export default function BannerHeader() {
           </div>
         </div>
       </header>
-      <section class="features">
-        <div class="feature feature-farm">
+      <section className="features">
+        <div className="feature feature-farm">
           <img src={mingcute_refresh} alt="mingcute_refresh" />
           <div>
             <h2>Fresh From Farm</h2>
             <span>consectetur adipiscing elit Sagittis sed ptibus</span>
           </div>
         </div>
-        <div class="feature feature-organic">
+        <div className="feature feature-organic">
           <img src={icons_codefresh} alt="icons_codefresh" />
           <div>
             <h2>100% Organic</h2>
             <span>consectetur adipiscing elit Sagittis sed ptibus</span>
           </div>
         </div>
-        <div class="feature feature-delivery">
+        <div className="feature feature-delivery">
           <img src={carbon_delivery} alt="carbon_delivery" />
           <div>
             <h2>Free Delivery</h2>

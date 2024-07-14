@@ -1,5 +1,7 @@
 import React from "react";
 import ProductItem from "./ProductItem";
+import "../resources/scss/content.scss";
+import { Row } from "antd";
 
 export default function FreshlyArrived() {
   const data = [];
@@ -7,10 +9,16 @@ export default function FreshlyArrived() {
     data.push(index);
   }
   return (
-    <div className="flex ">
-      {data.map((item) => {
-        return <ProductItem key={item} />;
-      })}
-    </div>
+    <>
+      <div className="product-header">
+        <div>Freshly arrived</div>
+        <button className="bg-primary">View all</button>
+      </div>
+      <Row style={{width: "100%"}} gutter={30}>
+        {data.map((item) => {
+          return <ProductItem key={item} />;
+        })}
+      </Row>
+    </>
   );
 }

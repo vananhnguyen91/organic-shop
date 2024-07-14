@@ -1,8 +1,13 @@
 import { Input } from "antd";
 import React from "react";
 import "../resources/scss/footer.scss";
-import logo_footer from "../resources/img/logo.png";
+import logo_header from "../resources/icons/logo_header.svg";
 import icons_leaf from "../resources/img/akar-icons_leaf.png";
+import facebook from "../resources/icons/facebook.svg";
+import twitter from "../resources/icons/twitter.svg";
+import pinterest from "../resources/icons/pinterest.png";
+import instagram from "../resources/icons/instagram.svg";
+import youtube from "../resources/icons/youtube.svg";
 
 const { Search } = Input;
 
@@ -33,8 +38,30 @@ export default function Footer() {
       <div className="footer-info">
         <div className="social-channel">
           <div className="logo">
-            <img src={logo_footer} alt="logo_footer" />
-            <img src={icons_leaf} alt="icons_leaf" />
+            <div className="flex justify-center items-center">
+              <img src={logo_header} alt="logo_header" />
+              <div className="text-shop">Organic</div>
+            </div>
+            <div>
+              <img src={icons_leaf} alt="icons_leaf" />
+            </div>
+          </div>
+          <div className="social-name">
+            <div className="facebook">
+              <img src={facebook} alt="facebook" />
+            </div>
+            <div className="twitter">
+              <img src={twitter} alt="twitter" />
+            </div>
+            <div className="pinterest">
+              <img src={pinterest} alt="pinterest" />
+            </div>
+            <div className="intagram">
+              <img src={instagram} alt="instagram" />
+            </div>
+            <div className="youtube">
+              <img src={youtube} alt="youtube" />
+            </div>
           </div>
         </div>
         <div className="quick_links">
