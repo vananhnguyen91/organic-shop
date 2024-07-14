@@ -1,14 +1,17 @@
 import { Input } from "antd";
 import React from "react";
+import "../resources/scss/footer.scss";
+import logo_footer from "../resources/img/logo.png";
+import icons_leaf from "../resources/img/akar-icons_leaf.png";
 
 const { Search } = Input;
 
 export default function Footer() {
   return (
-    <div className="">
-      <div>
+    <>
+      <div className="footer-looking-for">
         <p>People are also looking for</p>
-        <div className="flex flex-wrap items-center">
+        <div className="looking-for-info">
           <span>Blue diamon almonds</span>
           <span>Angie’s Boomchickapop Corn</span>
           <span>Salty kettle Corn</span>
@@ -27,49 +30,60 @@ export default function Footer() {
           <span>Sweet Vanilla essence Yogurt</span>
         </div>
       </div>
-      <div className="flex justify-between	">
-        <div>
-          <span>Logo</span>
-          <div className="flex "></div>
-        </div>
-        <div>
-          <div>ouick links</div>
-          <div>Home</div>
-          <div>About us</div>
-          <div>Offers</div>
-          <div>Services</div>
-          <div>Contact</div>
-          <div>us</div>
-        </div>
-        <div>
-          <div>About</div>
-          <div>How it work</div>
-          <div>our packages</div>
-          <div>promotions</div>
-          <div>refer a friend</div>
-        </div>
-        <div>
-          <div>Help Centre</div>
-          <div>Payments</div>
-          <div>Shipping</div>
-          <div>Product returns</div>
-          <div>FAQs</div>
-          <div>Checkout</div>
-          <div>other Issues</div>
-        </div>
-        <div>
-          <div>Our newsletter </div>
-          <div>
-            Subscribe to our newsletter to get updates about our grand offers.
+      <div className="footer-info">
+        <div className="social-channel">
+          <div className="logo">
+            <img src={logo_footer} alt="logo_footer" />
+            <img src={icons_leaf} alt="icons_leaf" />
           </div>
-          <Search
-            placeholder="Enter your email-address"
-            allowClear
-            enterButton="Search"
-            size="large"
-          />
+        </div>
+        <div className="quick_links">
+          <div>ouick links</div>
+          <div>
+            <div>Home</div>
+            <div>About us</div>
+            <div>Offers</div>
+            <div>Services</div>
+            <div>Contact</div>
+            <div>us</div>
+          </div>
+        </div>
+        <div className="quick_links">
+          <div>About</div>
+          <div>
+            <div>How it work</div>
+            <div>our packages</div>
+            <div>promotions</div>
+            <div>refer a friend</div>
+          </div>
+        </div>
+        <div className="quick_links">
+          <div>Help Centre</div>
+          <div>
+            <div>Payments</div>
+            <div>Shipping</div>
+            <div>Product returns</div>
+            <div>FAQs</div>
+            <div>Checkout</div>
+            <div>other Issues</div>
+          </div>
+        </div>
+        <div className="our-newsletter">
+          <div>Our newsletter </div>
+          <div className="subscribe">
+            Subscribe to our newsletter to get <br /> updates about our grand
+            offers.
+          </div>
+          <div className="send-email">
+            <Search
+              placeholder="Enter your email-address"
+              allowClear
+              enterButton="Search"
+              size="large"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

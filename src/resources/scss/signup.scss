@@ -1,5 +1,82 @@
 .sign-up-container {
     background: url("../img/banner_signup.jpeg") lightgray 50% / cover no-repeat;
-    height: 813px;
-    flex-shrink: 0;
+    display: flex;
+    width: 100%;
+    padding: 60px 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+}
+
+.sign-up-container>div {
+    gap: 70px;
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        .title {
+            font-size: 38px;
+            font-weight: 500;
+            line-height: 110%;
+            letter-spacing: -0.76px;
+            text-transform: capitalize;
+        }
+
+        .description {
+            color: #FFF;
+            font-family: "Open Sans", sans-serif;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 225%;
+        }
+    }
+
+    .sign-up {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+
+        .email-info {
+            border: 1px solid #ECECEC;
+            background: #FFF;
+            display: flex;
+            width: 523px;
+            padding: 10px 20px;
+            align-items: center;
+            gap: 13px;
+
+            input {
+                color: #222;
+                font-family: "Open Sans", sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 225%;
+                letter-spacing: 0.32px;
+            }
+        }
+
+        button {
+            display: flex;
+            padding: 12px 178px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            color: #FFF;
+
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 225%;
+            letter-spacing: 0.96px;
+            text-transform: uppercase;
+        }
+    }
 }

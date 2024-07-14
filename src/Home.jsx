@@ -12,7 +12,7 @@ import Features from "./Home/Features";
 import Footer from "./Home/Footer";
 import { Layout } from "antd";
 import Signup from "./Home/Signup";
-const { Header, Content } = Layout;
+const { Content } = Layout;
 export default function Home() {
   return (
     <Layout>
@@ -24,6 +24,12 @@ export default function Home() {
         style={{
           margin: "24px 16px",
           padding: 24,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "40px",
+          backgroundColor: "#FFF",
         }}
       >
         <PopularCategories />

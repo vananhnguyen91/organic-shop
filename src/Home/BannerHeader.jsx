@@ -1,6 +1,5 @@
 import React from "react";
 import "../resources/scss/header.scss";
-import { Button } from "antd";
 import mingcute_refresh from "../resources/icons/mingcute_refresh-3-line.svg";
 import icons_codefresh from "../resources/icons/simple-icons_codefresh.svg";
 import carbon_delivery from "../resources/icons/carbon_delivery-truck.svg";
@@ -10,16 +9,17 @@ export default function BannerHeader() {
     <div class="banner-top-container">
       <header class="header">
         <h1>
-          <span className="text-primary highlight">Organic</span> Foods at your{" "}
-          <span class="bold">Doorsteps</span>
+          <span className="text-primary highlight">Organic</span> Foods
+          <br />
+          at your <span class="bold">Doorsteps</span>
         </h1>
         <div class="buttons">
-          <Button class="btn btn-green">Start Shopping</Button>
-          <Button class="btn btn-black">Join us</Button>
+          <button className="btn-green">Start Shopping</button>
+          <button>Join us</button>
         </div>
         <div class="info">
           <div>
-            <span>19K+</span> Variety of Products
+            <span>19K+</span>Variety of Products
           </div>
           <div>
             <span>9K+</span> Happy Customers
