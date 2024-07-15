@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import "../resources/scss/content.scss";
 import product_item from "../resources/img/product-thumb.png";
 import arrow_right from "../resources/icons/arrow_right.svg";

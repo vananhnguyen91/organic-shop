@@ -2,9 +2,9 @@ import React from "react";
 import product_item from "../resources/img/product-thumb-1.png";
 import { Col, Rate } from "antd";
 
-export default function ProductItem() {
+export default function ProductItem({colSpan, rateColor = "#FFC43F"}) {
   return (
-    <Col span={4} className="product-item">
+    <Col span={colSpan ? colSpan : undefined} className="product-item">
       <div
         className="product-image"
         style={{
@@ -19,7 +19,7 @@ export default function ProductItem() {
           <span className="rate-sale">10% OFF</span>
         </div>
         <div className="product-rate">
-          <Rate allowHalf defaultValue={4.5} style={{ fontSize: 20 }} />
+          <Rate allowHalf defaultValue={4.5} style={{ fontSize: 20, color: rateColor }} />
           <span className="quantity">(221)</span>
         </div>
       </div>

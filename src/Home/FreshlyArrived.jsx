@@ -16,7 +16,7 @@ export default function FreshlyArrived() {
       </div>
       <Row style={{width: "100%"}} gutter={30}>
         {data.map((item) => {
-          return <ProductItem key={item} />;
+          return <ProductItem colSpan={4} key={item} />;
         })}
       </Row>
     </div>
