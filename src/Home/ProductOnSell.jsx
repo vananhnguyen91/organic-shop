@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductItem from "./ProductItem";
 import "../resources/scss/content.scss";
 import { Button } from "antd";
@@ -7,6 +7,8 @@ import "react-multi-carousel/lib/styles.css";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
 export default function ProductOnSell() {
+  const [hovered, setHovered] = useState(0);
+  const toggleHover = (item, value) => setHovered(value ? item : 0);
   let carouselRef = null;
   const data = [];
   for (let index = 1; index < 16; index++) {
@@ -50,7 +52,13 @@ export default function ProductOnSell() {
         className="popular_categories_list"
       >
         {data.map((item) => {
-          return <ProductItem key={item} />;
+          return (
+            <ProductItem
+              toggleHover={(value) => toggleHover(item, value)}
+              hovered={hovered === item ? true : false}
+              key={item}
+            />
+          );
         })}
       </Carousel>
     </div>

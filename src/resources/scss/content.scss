@@ -114,6 +114,19 @@
     }
   }
 }
+.product-item:hover {
+  display: flex;
+  padding: 26px 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
+  gap: 20px;
+  transition: ease-in;
+}
 
 .popular_categories_list {
   display: flex;
@@ -189,5 +202,4 @@
 }
 
 .product-square-list {
-   
 }
