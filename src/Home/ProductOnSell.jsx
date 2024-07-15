@@ -9,7 +9,7 @@ export default function ProductOnSell() {
     data.push(index);
   }
   return (
-    <>
+    <div className="product-on-sell-section w-full">
       <div className="product-header">
         <div>products on Sale</div>
         <button className="bg-primary">View all</button>
@@ -19,6 +19,6 @@ export default function ProductOnSell() {
           return <ProductItem key={item} />;
         })}
       </Row>
-    </>
+    </div>
   );
 }

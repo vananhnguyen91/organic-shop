@@ -8,7 +8,7 @@ export default function PopularCategories() {
     data.push(index);
   }
   return (
-    <>
+    <div className="popular-categories-section w-full">
       <div className="product-header">
         <div>Popular categories</div>
         <button className="bg-primary">View all</button>
@@ -27,6 +27,6 @@ export default function PopularCategories() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }

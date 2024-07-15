@@ -13,7 +13,7 @@ const { Search } = Input;
 
 export default function Footer() {
   return (
-    <>
+    <div className="footer-section">
       <div className="footer-looking-for">
         <p>People are also looking for</p>
         <div className="looking-for-info">
@@ -64,7 +64,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="quick_links">
+        <div className="ouick_links quick_links">
           <div>ouick links</div>
           <div>
             <div>Home</div>
@@ -75,7 +75,7 @@ export default function Footer() {
             <div>us</div>
           </div>
         </div>
-        <div className="quick_links">
+        <div className="about quick_links">
           <div>About</div>
           <div>
             <div>How it work</div>
@@ -84,7 +84,7 @@ export default function Footer() {
             <div>refer a friend</div>
           </div>
         </div>
-        <div className="quick_links">
+        <div className="help-centre quick_links">
           <div>Help Centre</div>
           <div>
             <div>Payments</div>
@@ -111,6 +111,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

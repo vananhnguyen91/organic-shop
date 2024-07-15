@@ -6,7 +6,7 @@ import "../resources/scss/features.scss";
 
 export default function DownloadApp() {
   return (
-    <div className="bg-green_DDF6D5 w-full download-app-container">
+    <div className="download-app-container bg-green_DDF6D5 w-full ">
       <div
         style={{ paddingTop: "56px" }}
         className="inline-flex justify-center items-center"

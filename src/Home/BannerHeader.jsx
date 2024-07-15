@@ -19,13 +19,14 @@ export default function BannerHeader() {
         </div>
         <div className="info">
           <div>
-            <span>19K+</span>Variety of Products
+            <div>19K+</div>
+            <div>Variety of Products</div>
           </div>
           <div>
-            <span>9K+</span> Happy Customers
+            <div>9K+</div> <div>Happy Customers</div>
           </div>
           <div>
-            <span>10+</span> Store Locations
+            <div>10+</div> <div>Store Locations</div>
           </div>
         </div>
       </header>

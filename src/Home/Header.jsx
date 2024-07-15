@@ -28,20 +28,20 @@ export default function HeaderContent() {
           size="large"
         />
       </div>
-      <div className="flex justify-center items-center self-stretch uppercase gap-2.5">
-        <div className="p-5">
+      <div className="menu-section flex justify-center items-center uppercase gap-2.5">
+        <div>
           <a href="#">Home</a>
         </div>
-        <div className="p-5">
+        <div>
           <a href="#">Sale</a>
         </div>
-        <div className="p-5">
+        <div>
           <a href="#">Stores</a>
         </div>
-        <div className="p-5">
+        <div>
           <a href="#">About</a>
         </div>
-        <div className="p-5">
+        <div>
           <a href="#">Contact</a>
         </div>
       </div>

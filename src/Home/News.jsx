@@ -11,7 +11,7 @@ export default function News() {
     data.push(index);
   }
   return (
-    <div className="news-post">
+    <div className="news-section news-post">
       <div className="header">
         <div className="title">our latest articles</div>
         <button className="bg-primary">View all</button>

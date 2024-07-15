@@ -18,7 +18,7 @@ export default function Home() {
         <HeaderContent />
         <BannerHeader />
       </div>
-      <div
+      <section
         className="body-section"
         style={{
           margin: 0,
@@ -41,7 +41,7 @@ export default function Home() {
         <DownloadApp />
         <Features />
         <Footer />
-      </div>
+      </section>
     </div>
   );
 }

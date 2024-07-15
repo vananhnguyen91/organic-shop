@@ -9,7 +9,7 @@ export default function FreshlyArrived() {
     data.push(index);
   }
   return (
-    <>
+    <div className="freshly-arrived-section">
       <div className="product-header">
         <div>Freshly arrived</div>
         <button className="bg-primary">View all</button>
@@ -19,6 +19,6 @@ export default function FreshlyArrived() {
           return <ProductItem key={item} />;
         })}
       </Row>
-    </>
+    </div>
   );
 }

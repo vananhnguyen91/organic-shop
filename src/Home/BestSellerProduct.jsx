@@ -9,7 +9,7 @@ export default function BestSellerProduct() {
     data.push(index);
   }
   return (
-    <>
+    <div className="best-seller-product-section w-full">
       <div className="product-header">
         <div>Best selling products</div>
         <button className="bg-primary">View all</button>
@@ -19,6 +19,6 @@ export default function BestSellerProduct() {
           return <ProductItem key={item} />;
         })}
       </Row>
-    </>
+    </div>
   );
 }
