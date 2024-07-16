@@ -9,20 +9,27 @@ import {
 } from "@ant-design/icons";
 
 export default function ProductItem({
-  colSpan,
+  responsive = false,
   rateColor = "#FFC43F",
   toggleHover = () => {},
   hovered = false,
 }) {
+  const colSetting = responsive
+    ? {
+        xs: 12,
+        md: 8,
+        lg: 4,
+      }
+    : {};
   return (
     <Col
-      span={colSpan ? colSpan : undefined}
+      {...colSetting}
       className="product-item"
       onMouseEnter={() => toggleHover(true)}
       onMouseLeave={() => toggleHover(false)}
     >
       <div
-        className="product-image"
+        className="product-image xs:w-[80px] w-[210px] aspect-square"
         style={{
           background: `url(${product_item}) lightgray 50% / cover no-repeat`,
         }}
@@ -30,31 +37,39 @@ export default function ProductItem({
       <div className="product-info">
         <p className="product-name">Munch Crunchy Cookies</p>
         <div className="product-price">
-          <span className="price-origin">$11.00</span>
-          <span className="price-sale">$8.00</span>
-          <span className="rate-sale">10% OFF</span>
+          <span className="price-origin text-[15px] xs:text-[10px]">
+            $11.00
+          </span>
+          <span className="price-sale text-[17px] xs:text-[12px]">$8.00</span>
+          <span className="rate-sale xs:text-[10px] py-[4px] px-[7px]">
+            10% OFF
+          </span>
         </div>
         <div className="product-rate">
           <Rate
             allowHalf
             defaultValue={4.5}
-            style={{ fontSize: 20, color: rateColor }}
+            className="text-[20px] xs:text-[12px]"
+            style={{ color: rateColor }}
           />
-          <span className="quantity">(221)</span>
+          <span className="quantity text-[15px] xs:text-[12px]">(221)</span>
         </div>
       </div>
       {hovered && (
         <>
-          <div className="product-quantity flex gap-2.5 text-[#222222]">
+          <div className="product-quantity justify-center items-center w-full xs:text-[12px] flex gap-2.5 text-[#222222]">
             <Button icon={<MinusOutlined />} />
             <InputNumber defaultValue={3} />
             <Button icon={<PlusOutlined />} />
           </div>
-          <div className="product-add-to-cart flex gap-2 text-[#222222] font-semibold">
-            <Button className="uppercase" icon={<ShoppingOutlined />}>
+          <div className="product-add-to-cart justify-center items-center w-full xs:text-[12px] flex gap-2 text-[#222222] font-semibold">
+            <Button
+              className="uppercase xs:text-[12px] small"
+              icon={<ShoppingOutlined />}
+            >
               Add to cart
             </Button>
-            <Button icon={<HeartOutlined />} />
+            <Button className="small" icon={<HeartOutlined />} />
           </div>
         </>
       )}

@@ -12,17 +12,21 @@ export default function FreshlyArrived() {
   }
   return (
     <div className="freshly-arrived-section">
-      <div className="product-header">
-        <div>Freshly arrived</div>
-        <button className="bg-primary">View all</button>
+      <div className="product-header flex py-7 px-2.5 xs:justify-start justify-between xs:flex-col xs:items-start items-center w-full xs:gap-5">
+        <div className="text-nowrap  text-black_200 text-[32px] font-normal capitalize">
+          Freshly arrived
+        </div>
+        <button className="bg-primary xs:mr-2 mr-[13.85px] text-white_100 py-[15px] px-5 items-center rounded-[10px] text-base	 leading-[100%] tracking-[1.12px] uppercase">
+          View all
+        </button>
       </div>
-      <Row style={{ width: "100%" }} gutter={30}>
+      <Row className="w-full" gutter={30}>
         {data.map((item) => {
           return (
             <ProductItem
+              responsive={true}
               hovered={hovered === item ? true : false}
               toggleHover={(value) => toggleHover(item, value)}
-              colSpan={4}
               key={item}
             />
           );

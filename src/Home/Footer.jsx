@@ -14,9 +14,11 @@ const { Search } = Input;
 export default function Footer() {
   return (
     <div className="footer-section">
-      <div className="footer-looking-for">
-        <p>People are also looking for</p>
-        <div className="looking-for-info">
+      <div className="footer-looking-for flex py-2.5 px-0 flex-col items-start gap-5">
+        <div className=" text-black_200 text-[32px] font-normal capitalize">
+          People are also looking for
+        </div>
+        <div className="looking-for-info mt-5 flex items-center self-stretch gap-[15px] flex-wrap">
           <span>Blue diamon almonds</span>
           <span>Angie’s Boomchickapop Corn</span>
           <span>Salty kettle Corn</span>
@@ -35,8 +37,8 @@ export default function Footer() {
           <span>Sweet Vanilla essence Yogurt</span>
         </div>
       </div>
-      <div className="footer-info">
-        <div className="social-channel">
+      <div className="footer-info flex justify-between w-full pt-[60px] flex-wrap text-black_200 font-open_sans gap-10">
+        <div className="social-channel xs:flex xs:flex-col xs:items-center">
           <div className="logo">
             <div className="flex justify-center items-center">
               <img src={logo_header} alt="logo_header" />

@@ -30,19 +30,24 @@ export default function ProductOnSell() {
   };
   return (
     <div className="product-on-sell-section w-full">
-      <div className="product-header">
-        <div>products on Sale</div>
-        <div>
-          <Button
-            onClick={() => carouselRef.previous()}
-            className="small mr-[13.85px] bg-lightgray_F1F1F1"
-            icon={<LeftOutlined className="text-black_333" />}
-          />
-          <Button
-            onClick={() => carouselRef.next()}
-            className="small bg-primary"
-            icon={<RightOutlined />}
-          />
+      <div className="product-header flex py-7 px-2.5 xs:justify-start justify-between xs:flex-col xs:items-start items-center w-full xs:gap-5">
+        <div className="text-nowrap  text-black_200 text-[32px] font-normal capitalize">
+          products on Sale
+        </div>
+        <div className="flex xs:justify-between xs:w-full justify-end items-center xs:gap-2 gap-10">
+          <div></div>
+          <div className="xs:flex xs:justify-between">
+            <Button
+              onClick={() => carouselRef.previous()}
+              className="small xs:mr-2 mr-[13.85px] text-black_200 bg-lightgray_F1F1F1 py-[15px] px-5 items-center rounded-[10px] text-base	 leading-[100%] tracking-[1.12px] uppercase"
+              icon={<LeftOutlined className="text-black_300" />}
+            />
+            <Button
+              onClick={() => carouselRef.next()}
+              className="small bg-primary xs:mr-2 mr-[13.85px] text-white_100  py-[15px] px-5 items-center rounded-[10px] text-base	 leading-[100%] tracking-[1.12px] uppercase"
+              icon={<RightOutlined />}
+            />
+          </div>
         </div>
       </div>
       <Carousel
