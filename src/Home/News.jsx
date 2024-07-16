@@ -23,7 +23,7 @@ export default function News() {
           </div>
         </div>
       </div>
-      <div className="flex xs:flex-col flex-row justify-start items-center xs:gap-2.5 gap-[52px] flex-wrap mt-5 ">
+      <div className="flex flex-col xs:justify-between lg:flex-row justify-start items-center xs:gap-2.5 lg:gap-5 gap-[52px] flex-wrap mt-5 ">
         {data.map((item) => {
           return (
             <div

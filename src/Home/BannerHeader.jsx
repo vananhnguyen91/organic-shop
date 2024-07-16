@@ -31,15 +31,15 @@ export default function BannerHeader() {
     },
   ];
   return (
-    <div className="banner-top-container flex flex-col xs:min-h-[700px] sm:min-h-[700px]">
-      <header className="xs:p-10 xs:pb-0 sm:p-10 sm:pb-0 pl-[320px] pt-[200px] flex flex-col items-start gap-10">
+    <div className="banner-top-container flex flex-col xs:min-h-[700px]">
+      <header className="xs:p-10 xs:pb-0 pl-[320px] pt-[200px] flex flex-col items-start gap-10">
         <h1 className="text-black xs:text-[35px] text-[69px] font-normal leading-[120%] tracking-[-2.07px]">
           <span className="text-primary font-bold tracking-[-2.07px]">
-            Organic
+            Organic{" "}
           </span>
           Foods
           <br />
-          at your
+          at your{" "}
           <span className="font-bold tracking-[-2.07px]">Doorsteps</span>
         </h1>
         <div className="flex justify-between items-center gap-2.5">
@@ -55,7 +55,7 @@ export default function BannerHeader() {
             return (
               <div
                 key={index}
-                className="flex xs:flex-col items-center justify-between gap-2.5 max-w-[200px] xs:max-w-none "
+                className="flex xs:flex-col items-center justify-between gap-2.5 max-w-[200px] xs:max-w-none"
               >
                 <div className="first:text-black first:text-center first:text-[32px] first:font-bold first:leading-[120%]">
                   {item.value}

@@ -16,9 +16,14 @@ export default function FreshlyArrived() {
         <div className="text-nowrap  text-black_200 text-[32px] font-normal capitalize">
           Freshly arrived
         </div>
-        <button className="bg-primary xs:mr-2 mr-[13.85px] text-white_100 py-[15px] px-5 items-center rounded-[10px] text-base	 leading-[100%] tracking-[1.12px] uppercase">
-          View all
-        </button>
+        <div className="flex xs:justify-between xs:w-full justify-end items-center xs:gap-2 gap-10">
+          <div></div>
+          <div className="xs:flex xs:justify-between">
+            <button className="bg-primary xs:mr-2 mr-[13.85px] text-white_100 py-[15px] px-5 items-center rounded-[10px] text-base	 leading-[100%] tracking-[1.12px] uppercase">
+              View all
+            </button>
+          </div>
+        </div>
       </div>
       <Row className="w-full" gutter={30}>
         {data.map((item) => {

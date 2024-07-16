@@ -23,7 +23,7 @@ export default function HeaderContent() {
   }
   return (
     <div className="header-container flex justify-between items-center h-[84px] bg-white">
-      <div className="flex xs:justify-between xs:w-full justify-center items-center h-[60px] px-5">
+      <div className="flex xs:justify-between xs:w-full justify-center items-center px-5">
         <div className="flex justify-center items-center">
           <img className="mr-1" src={logo_header} alt="logo_header" />
           <div className="ml-px text-black font_khand text-[40px] font-medium">
@@ -34,7 +34,7 @@ export default function HeaderContent() {
           <img src={gg_menu} alt="gg_menu" />
         </div>
       </div>
-      <div className="input-search xs:hidden sm:hidden flex justify-center items-center w-[30%]">
+      <div className="input-search xs:hidden flex justify-center items-center w-[30%]">
         <Search
           placeholder="Search products"
           allowClear
@@ -42,7 +42,7 @@ export default function HeaderContent() {
           size="large"
         />
       </div>
-      <div className="xs:hidden sm:hidden flex justify-center items-center uppercase gap-2.5">
+      <div className="xs:hidden flex justify-center items-center uppercase gap-2.5">
         <div className="py-8 px-2.5 active:border-b-[3px] active:border-solid active:border-[#364127]">
           <a href="#">Home</a>
         </div>
@@ -59,7 +59,7 @@ export default function HeaderContent() {
           <a href="#">Contact</a>
         </div>
       </div>
-      <div className="xs:hidden sm:hidden flex justify-center items-center self-stretch uppercase gap-2.5">
+      <div className="xs:hidden flex justify-center items-center self-stretch uppercase gap-2.5">
         <div className="p-5">
           <img src={solar_user} alt="solar_user" />
         </div>

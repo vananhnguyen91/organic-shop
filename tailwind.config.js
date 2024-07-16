@@ -23,8 +23,7 @@ module.exports = {
       "2xl": { min: "1600px" },
       xl: { min: "1200px" },
       lg: { min: "992px" },
-      md: { min: "768px" },
-      xs: { max: "767px" },
+      xs: { max: "991px" },
     },
     fontFamily: {
       inter: ['"Inter"', "sans-serif"],

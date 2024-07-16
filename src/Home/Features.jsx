@@ -12,7 +12,7 @@ export default function Features() {
         {data.map((item) => {
           return (
             <div
-              className="feature-item basis-1/5 flex py-5 px-[30px] flex-col justify-end items-start gap-2.5 self-stretch border border-solid border-[#D2D2D2] "
+              className="feature-item basis-[calc(20%-10px)] flex py-5 px-[30px] flex-col justify-end items-start gap-2.5 self-stretch border border-solid border-[#D2D2D2] "
               key={item}
             >
               <div>
