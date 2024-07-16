@@ -1,34 +1,5 @@
 .header-container {
-  height: 84px;
-  background: #fff;
-
-  .menu-section > div {
-    padding: 32px 10px;
-  }
-  .menu-section > div:active {
-    border-bottom: 3px solid #364127;
-  }
-
-  .header-shop-info {
-    height: 61px;
-    padding: 0px 20px;
-    gap: 10px;
-
-    .text-shop {
-      color: #000;
-      font-family: "Khand", sans-serif;
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 500;
-    }
-  }
-
   .input-search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-
     span.ant-input-outlined {
       border-radius: 10px 0px 0px 10px;
       border: 1px solid #d8d8d8;
@@ -43,7 +14,7 @@
       }
     }
 
-    span.ant-input-group-addon > .ant-input-search-button {
+    span.ant-input-group-addon>.ant-input-search-button {
       border-radius: 0px 10px 10px 0px;
       background: #6bb252;
       padding: 15px 17px;
@@ -51,15 +22,17 @@
     }
   }
 }
+
 .ant-drawer-content-wrapper {
   width: 358px !important;
+
+  @media (max-width: 576px) {
+    width: 100% !important;
+  }
 }
 
 .banner-top-container {
   background: url("../img/banner.jpeg") lightgray 50% / cover no-repeat;
-  height: 729px;
-  display: flex;
-  flex-direction: column;
 
   .header {
     position: absolute;
@@ -124,12 +97,13 @@
       line-height: 120%;
       text-transform: uppercase;
 
-      > div {
+      >div {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 10px;
         max-width: 200px;
+
         div:first-child {
           color: #000;
           text-align: center;

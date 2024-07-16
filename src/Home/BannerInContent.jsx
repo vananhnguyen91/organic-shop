@@ -6,19 +6,30 @@ import banner_ad_2 from "../resources/img/banner_ad_2.png";
 import banner_ad_3 from "../resources/img/banner_ad_3.png";
 
 export default function BannerInContent() {
+  const data = [
+    {
+      banner: banner_ad_1,
+      title: "Items on SALE",
+      description: "Discounts up to 30%",
+      text_link: "shop now",
+    },
+    {
+      banner: banner_ad_2,
+      title: "Combo offer",
+      description: "save up to 100%",
+      text_link: "shop now",
+    },
+    {
+      banner: banner_ad_3,
+      title: "Discount Coupons",
+      description: "Discounts up to 30%",
+      text_link: "shop now",
+    },
+  ];
   return (
-    <Row
-      className="banner-in-content"
-      style={{
-        width: "100%",
-        padding: "0 10px",
-        gap: "30px",
-        flexWrap: "nowrap",
-      }}
-    >
-      <Col
-        span={14}
-        className="ad-info"
+    <div className="banner-in-content flex xs:flex-col flex-row w-full py-0 px-2.5 gap-[30px] flex-nowrap">
+      <div
+        className="ad-info basis-[60%] flex items-center self-stretch text-white xs:py-[30px] gap-5 xs:px-5 py-[60px] px-10 text-[40px] leading-[140%] capitalize"
         style={{
           background: `url(${banner_ad_1}) lightgray 0px -170px / 138.222% 222.143% no-repeat`,
         }}
@@ -28,21 +39,12 @@ export default function BannerInContent() {
           <div className="description">Discounts up to 30%</div>
           <div className="link">shop now</div>
         </div>
-      </Col>
-      <Col
-        span={10}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "30px",
-          flexWrap: "nowrap",
-          flex: "1 0",
-        }}
-      >
+        ;
+      </div>
+      <div className="flex flex-col basis-[40%] gap-[30px] flex-nowrap">
         <div
-          className="ad-info"
+          className="ad-info h-[50%] flex items-center self-stretch text-white xs:py-[30px] gap-5 xs:px-5 py-[60px] px-10 text-[40px] leading-[140%] capitalize"
           style={{
-            height: "50%",
             background: `url(${banner_ad_2}) lightgray 50% / cover no-repeat`,
           }}
         >
@@ -53,9 +55,8 @@ export default function BannerInContent() {
           </div>
         </div>
         <div
-          className="ad-info"
+          className="ad-info h-[50%] flex items-center self-stretch text-white xs:py-[30px] gap-5 xs:px-5 py-[60px] px-10 text-[40px] leading-[140%] capitalize"
           style={{
-            height: "50%",
             background: `url(${banner_ad_3}) lightgray 0px -169.728px / 139.779% 177.565% no-repeat`,
           }}
         >
@@ -65,7 +66,7 @@ export default function BannerInContent() {
             <div className="link">shop now</div>
           </div>
         </div>
-      </Col>
-    </Row>
+      </div>
+    </div>
   );
 }

@@ -1,17 +1,6 @@
 .footer-looking-for {
-    display: flex;
-    padding: 10px 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
 
     .looking-for-info {
-        display: flex;
-        align-items: center;
-        align-content: center;
-        gap: 15px;
-        align-self: stretch;
-        flex-wrap: wrap;
 
         span {
             display: flex;
@@ -22,7 +11,6 @@
             border-radius: 10px;
             background: #ddf6d5;
             color: #555;
-
             font-family: "Open Sans", sans-serif;
             font-size: 16px;
             letter-spacing: 0.32px;
@@ -32,16 +20,10 @@
 }
 
 .footer-info {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 60px;
-    flex-wrap: wrap;
-    color: #222;
-    font-family: "Open Sans", sans-serif;
 
     .social-channel {
         align-items: center;
+
         .logo {
             display: flex;
             align-items: center;
