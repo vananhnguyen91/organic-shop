@@ -32,7 +32,7 @@ export default function BannerHeader() {
   ];
   return (
     <div className="banner-top-container flex flex-col xs:min-h-[700px]">
-      <header className="xs:p-10 xs:pb-0 pl-[320px] pt-[200px] flex flex-col items-start gap-10">
+      <header className="xs:w-full w-[67.5%] mx-auto xs:p-10 py-[122px] flex flex-col items-start xs:gap-5 gap-10">
         <h1 className="text-black xs:text-[35px] text-[69px] font-normal leading-[120%] tracking-[-2.07px]">
           <span className="text-primary font-bold tracking-[-2.07px]">
             Organic{" "}
@@ -42,20 +42,21 @@ export default function BannerHeader() {
           at your{" "}
           <span className="font-bold tracking-[-2.07px]">Doorsteps</span>
         </h1>
-        <div className="flex justify-between items-center gap-2.5">
-          <button className="bg-primary py-5 px-10 justify-center items-center gap-2.5 rounded-[110px]  text-white text-center text-xl font-semibold  ">
+        <div className="flex justify-start items-center gap-2.5 xs:text-base text-xl">
+          <button className="bg-primary py-5 px-10 justify-center items-center gap-2.5 rounded-[110px]  text-white text-center font-semibold">
             Start Shopping
           </button>
-          <button className=" py-5 px-10 justify-center items-center gap-2.5 rounded-[110px] bg-black_100 text-white text-center text-xl font-semibold  ">
+          <button className=" py-5 px-10 justify-center items-center gap-2.5 rounded-[110px] bg-black_100 text-white text-center font-semibold">
             Join us
           </button>
         </div>
+
         <div className="flex xs:justify-center items-start py-5 gap-5 text-black font-normal leading-[120%] uppercase">
           {data.map((item, index) => {
             return (
               <div
                 key={index}
-                className="flex xs:flex-col items-center justify-between gap-2.5 max-w-[200px] xs:max-w-none"
+                className="flex xs:flex-col  items-start justify-between gap-2.5 max-w-[200px] xs:max-w-none"
               >
                 <div className="first:text-black first:text-center first:text-[32px] first:font-bold first:leading-[120%]">
                   {item.value}
@@ -67,7 +68,7 @@ export default function BannerHeader() {
         </div>
       </header>
       <div className="hidden bg-gray_100 bg-orange_100 bg-primary"></div>
-      <section className="my-0 mx-auto mt-auto flex xs:flex-col xs:w-full justify-center w-[64%]">
+      <section className="my-0 mx-auto mt-auto flex xs:flex-col xs:w-full justify-center w-[67.5%]">
         {dataFeature.map((item, index) => {
           return (
             <div

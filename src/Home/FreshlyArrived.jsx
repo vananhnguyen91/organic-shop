@@ -25,7 +25,7 @@ export default function FreshlyArrived() {
           </div>
         </div>
       </div>
-      <Row className="w-full" gutter={30}>
+      <Row className="w-full relative" gutter={30}>
         {data.map((item) => {
           return (
             <ProductItem

@@ -31,6 +31,10 @@ module.exports = {
       khand: ['"Khand"', "sans-serif"],
       roboto: ['"Roboto"', "sans-serif"],
     },
+    boxShadow: {
+      product_item: " 0px 4px 25px 0px rgba(0, 0, 0, 0.15)",
+      social_item: "0px 6px 20px 0px rgba(0, 0, 0, 0.1);",
+    },
   },
 
   plugins: [],

@@ -23,12 +23,12 @@ export default function News() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col xs:justify-between lg:flex-row justify-start items-center xs:gap-2.5 lg:gap-5 gap-[52px] flex-wrap mt-5 ">
+      <div className="flex xs:flex-col xs:justify-between flex-row justify-start items-center xs:gap-2.5 gap-5 flex-wrap mt-5 w-full ">
         {data.map((item) => {
           return (
             <div
               key={item}
-              className="post-content basis-[30%] border border-solid border-[#D3D3D3]"
+              className="post-content basis-[32%] border border-solid border-[#D3D3D3]"
             >
               <div className="h-60">
                 <img

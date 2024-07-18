@@ -24,7 +24,7 @@ export default function ProductItem({
   return (
     <Col
       {...colSetting}
-      className="product-item"
+      className="flex p-2.5 flex-col justify-center items-center gap-5 hover:absolute hover:rounded-[20px] hover:shadow-product_item"
       onMouseEnter={() => toggleHover(true)}
       onMouseLeave={() => toggleHover(false)}
     >
