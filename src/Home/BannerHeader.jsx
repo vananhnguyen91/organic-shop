@@ -32,7 +32,7 @@ export default function BannerHeader() {
   ];
   return (
     <div className="banner-top-container flex flex-col xs:min-h-[700px]">
-      <header className="xs:w-full w-[67.5%] mx-auto xs:p-10 py-[122px] flex flex-col items-start xs:gap-5 gap-10">
+      <header className="xs:w-full w-[67.5%] mx-auto xs:py-10 xs:px-5 py-[122px] flex flex-col items-start xs:gap-5 gap-10">
         <h1 className="text-black xs:text-[35px] text-[69px] font-normal leading-[120%] tracking-[-2.07px]">
           <span className="text-primary font-bold tracking-[-2.07px]">
             Organic{" "}
@@ -42,11 +42,11 @@ export default function BannerHeader() {
           at your{" "}
           <span className="font-bold tracking-[-2.07px]">Doorsteps</span>
         </h1>
-        <div className="flex justify-start items-center gap-2.5 xs:text-base text-xl">
-          <button className="bg-primary py-5 px-10 justify-center items-center gap-2.5 rounded-[110px]  text-white text-center font-semibold">
+        <div className="flex justify-start xs:justify-between gap-2.5 text-xl self-stretch">
+          <button className="bg-primary py-5 px-10 xs:px-5 justify-center gap-2.5 rounded-[110px]  text-white text-center font-semibold">
             Start Shopping
           </button>
-          <button className=" py-5 px-10 justify-center items-center gap-2.5 rounded-[110px] bg-black_100 text-white text-center font-semibold">
+          <button className="py-5 px-10 xs:px-5 justify-center gap-2.5 rounded-[110px] bg-black_100 text-white text-center font-semibold">
             Join us
           </button>
         </div>

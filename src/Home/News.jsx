@@ -10,18 +10,13 @@ export default function News() {
   }
   return (
     <div className="news-section news-post">
-      <div className="header flex py-7 px-2.5 xs:justify-start justify-between xs:flex-col xs:items-start items-center w-full xs:gap-5">
-        <div className="text-nowrap  text-black_200 text-[32px] font-normal capitalize">
+      <div className="product-header flex py-7 px-2.5 justify-between items-center w-full xs:gap-2.5">
+        <div className="text-nowrap text-black_200 xs:text-2xl text-[32px] font-normal capitalize">
           our latest articles
         </div>
-        <div className="flex xs:justify-between xs:w-full justify-end items-center xs:gap-2 gap-10">
-          <div></div>
-          <div className="xs:flex xs:justify-between">
-            <button className="bg-primary xs:mr-2 mr-[13.85px] text-white_100 py-[15px] px-5 items-center rounded-[10px] text-base	 leading-[100%] tracking-[1.12px] uppercase">
-              View all
-            </button>
-          </div>
-        </div>
+        <button className="bg-primary text-white_100 xs:p-2 p-5 text-center rounded-[10px] text-base xs:text-sm leading-[100%] tracking-[1.12px] uppercase">
+          View all
+        </button>
       </div>
       <div className="flex xs:flex-col xs:justify-between flex-row justify-start items-center xs:gap-2.5 gap-5 flex-wrap mt-5 w-full ">
         {data.map((item) => {

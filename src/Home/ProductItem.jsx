@@ -1,6 +1,6 @@
 import React from "react";
 import product_item from "../resources/img/product-thumb-1.png";
-import { Button, Col, InputNumber, Rate } from "antd";
+import { Button, InputNumber, Rate } from "antd";
 import {
   HeartOutlined,
   MinusOutlined,
@@ -14,17 +14,9 @@ export default function ProductItem({
   toggleHover = () => {},
   hovered = false,
 }) {
-  const colSetting = responsive
-    ? {
-        xs: 12,
-        md: 8,
-        lg: 4,
-      }
-    : {};
   return (
-    <Col
-      {...colSetting}
-      className="flex p-2.5 flex-col justify-center items-center gap-5 hover:absolute hover:rounded-[20px] hover:shadow-product_item"
+    <div
+      className="flex xs:w-1/2 w-1/5 p-2.5 flex-col justify-center items-center gap-5 hover:absolute hover:rounded-[20px] hover:shadow-product_item"
       onMouseEnter={() => toggleHover(true)}
       onMouseLeave={() => toggleHover(false)}
     >
@@ -34,25 +26,31 @@ export default function ProductItem({
           background: `url(${product_item}) lightgray 50% / cover no-repeat`,
         }}
       />
-      <div className="product-info">
-        <p className="product-name">Munch Crunchy Cookies</p>
-        <div className="product-price">
-          <span className="price-origin text-[15px] xs:text-[10px]">
+      <div className="product-info flex flex-col justify-center items-center gap-1 self-stretch">
+        <p className="product-name text-black_300 text-center font-base font-normal leading-[170%] capitalize">
+          Munch Crunchy Cookies
+        </p>
+        <div className="product-price flex justify-center items-center gap-2 font-open_sans">
+          <span className="price-origin text-[15px] xs:text-[10px] text-[#777] font-semibold leading-[100%] line-through capitalize">
             $11.00
           </span>
-          <span className="price-sale text-[17px] xs:text-[12px]">$8.00</span>
-          <span className="rate-sale xs:text-[10px] py-[4px] px-[7px]">
+          <span className="price-sale text-[#131313] text-[17px] xs:text-[12px] font-semibold leading-[100%] capitalize">
+            $8.00
+          </span>
+          <span className="rate-sale flex justify-center items-center gap-2.5 border border-solid border-[#c2c2c2] text-[#a5a5a5] font-semibold leading-[100%] xs:text-[10px] py-[4px] px-[7px] capitalize">
             10% OFF
           </span>
         </div>
-        <div className="product-rate">
+        <div className="product-rate flex justify-center items-center gap-2.5">
           <Rate
             allowHalf
             defaultValue={4.5}
             className="text-[20px] xs:text-[12px]"
             style={{ color: rateColor }}
           />
-          <span className="quantity text-[15px] xs:text-[12px]">(221)</span>
+          <span className="quantity text-[#a5a5a5] font-open_sans capitalize font-semibold leading-[100%] text-[15px] xs:text-[12px]">
+            (221)
+          </span>
         </div>
       </div>
       {hovered && (
@@ -73,6 +71,6 @@ export default function ProductItem({
           </div>
         </>
       )}
-    </Col>
+    </div>
   );
 }

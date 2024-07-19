@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import logo_header from "../resources/icons/logo_header.svg";
-import gg_menu from "../resources/icons/gg_menu.svg";
 import solar_cart from "../resources/icons/solar_cart-3-linear.svg";
 import solar_bookmark from "../resources/icons/solar_bookmark-linear.svg";
 import solar_user from "../resources/icons/solar_user-circle-linear.svg";
-import close_thin from "../resources/icons/close_thin.svg";
 import fruits_icon from "../resources/icons/fruits-menu.svg";
 import { Drawer, Input } from "antd";
 import "../resources/scss/header.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const { Search } = Input;
 export default function HeaderContent() {
@@ -22,19 +22,21 @@ export default function HeaderContent() {
     });
   }
   return (
-    <div className="header-container flex justify-between items-center h-[84px] bg-white">
-      <div className="flex xs:justify-between xs:w-full justify-center items-center px-5">
-        <div className="flex justify-center items-center">
-          <img className="mr-1" src={logo_header} alt="logo_header" />
-          <div className="ml-px text-black font_khand text-[40px] font-medium">
-            Organic
+    <div className="header-container flex xs:flex-col justify-between items-center h-[84px] xs:min-h-[84px] bg-white xs:h-auto">
+      <div className="flex xs:justify-between xs:w-full justify-center items-center px-5 xs:py-5 ">
+        <a href="#home">
+          <div className="flex justify-center items-center">
+            <img className="mr-1" src={logo_header} alt="logo_header" />
+            <h1 className="ml-px text-black font_khand text-[40px] font-medium">
+              Organic
+            </h1>
           </div>
-        </div>
+        </a>
         <div style={{ padding: "10px 17px" }} onClick={() => setOpen(true)}>
-          <img src={gg_menu} alt="gg_menu" />
+          <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
-      <div className="input-search xs:hidden flex justify-center items-center w-[30%]">
+      <div className="input-search flex justify-center items-center w-[30%] xs:w-full xs:px-5 xs:pb-5">
         <Search
           placeholder="Search products"
           allowClear
@@ -44,19 +46,19 @@ export default function HeaderContent() {
       </div>
       <div className="xs:hidden flex justify-center items-center uppercase gap-2.5">
         <div className="py-8 px-2.5 active:border-b-[3px] active:border-solid active:border-[#364127]">
-          <a href="#">Home</a>
+          <a href="#home">Home</a>
         </div>
         <div className="py-8 px-2.5 active:border-b-[3px] active:border-solid active:border-[#364127]">
-          <a href="#">Sale</a>
+          <a href="#sale">Sale</a>
         </div>
         <div className="py-8 px-2.5 active:border-b-[3px] active:border-solid active:border-[#364127]">
-          <a href="#">Stores</a>
+          <a href="#stores">Stores</a>
         </div>
         <div className="py-8 px-2.5 active:border-b-[3px] active:border-solid active:border-[#364127]">
-          <a href="#">About</a>
+          <a href="#about">About</a>
         </div>
         <div className="py-8 px-2.5 active:border-b-[3px] active:border-solid active:border-[#364127]">
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
       <div className="xs:hidden flex justify-center items-center self-stretch uppercase gap-2.5">
@@ -88,7 +90,11 @@ export default function HeaderContent() {
               Menu
             </span>
             <div className="h-full" onClick={() => setOpen(false)}>
-              <img src={close_thin} alt="close_thin" />
+              <FontAwesomeIcon
+                icon={faXmark}
+                size="xl"
+                style={{ color: "red" }}
+              />
             </div>
           </div>
         }

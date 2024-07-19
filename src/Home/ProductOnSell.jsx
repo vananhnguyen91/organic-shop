@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import ProductItem from "./ProductItem";
 import "../resources/scss/content.scss";
-import { Button } from "antd";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function ProductOnSell() {
   const [hovered, setHovered] = useState(0);
@@ -30,31 +33,39 @@ export default function ProductOnSell() {
   };
   return (
     <div className="product-on-sell-section w-full">
-      <div className="product-header flex py-7 px-2.5 xs:justify-start justify-between xs:flex-col xs:items-start items-center w-full xs:gap-5">
-        <div className="text-nowrap  text-black_200 text-[32px] font-normal capitalize">
-          products on Sale
+      <div className="product-header flex py-7 px-2.5 justify-between items-center w-full xs:gap-2.5">
+        <div className="text-nowrap text-black_200 xs:text-2xl text-[32px] font-normal capitalize">
+          product on sell
         </div>
-        <div className="flex xs:justify-between xs:w-full justify-end items-center xs:gap-2 gap-10">
-          <div></div>
-          <div className="xs:flex xs:justify-between">
-            <Button
-              onClick={() => carouselRef.previous()}
-              className="small xs:mr-2 mr-[13.85px] text-black_200 bg-lightgray_F1F1F1 py-[15px] px-5 items-center rounded-[10px] text-base	 leading-[100%] tracking-[1.12px] uppercase"
-              icon={<LeftOutlined className="text-black_300" />}
+
+        <div className="xs:flex xs:justify-between h-[50px] xs:h-9">
+          <button
+            className="aspect-square hotive:xs:bg-primary xs:mr-2 mr-[13.85px] text-black_200 bg-lightgray_F1F1F1 xs:p-2.5 items-center rounded-[10px] text-base	leading-[100%] tracking-[1.12px] uppercase"
+            onClick={() => carouselRef.previous()}
+          >
+            <FontAwesomeIcon
+              icon={faChevronLeft}
+              size="xs"
+              className="text-[#787878] hotive:xs:text-white"
             />
-            <Button
-              onClick={() => carouselRef.next()}
-              className="small bg-primary xs:mr-2 mr-[13.85px] text-white_100  py-[15px] px-5 items-center rounded-[10px] text-base	 leading-[100%] tracking-[1.12px] uppercase"
-              icon={<RightOutlined />}
+          </button>
+          <button
+            className="aspect-square hotive:xs:bg-primary text-black_200 bg-lightgray_F1F1F1 xs:p-2.5 items-center rounded-[10px] text-base leading-[100%] tracking-[1.12px] uppercase"
+            onClick={() => carouselRef.next()}
+          >
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              size="xs"
+              className="text-[#787878] hotive:xs:text-white"
             />
-          </div>
+          </button>
         </div>
       </div>
       <Carousel
         responsive={responsive}
         arrows={false}
         ref={(el) => (carouselRef = el)}
-        className="popular_categories_list"
+        className="flex items-center justify-between w-full"
       >
         {data.map((item) => {
           return (

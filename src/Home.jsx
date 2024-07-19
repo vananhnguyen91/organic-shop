@@ -11,7 +11,6 @@ import DownloadApp from "./Home/DownloadApp";
 import Features from "./Home/Features";
 import Footer from "./Home/Footer";
 import Signup from "./Home/Signup";
-import { Layout } from "antd";
 export default function Home() {
   return (
     <div>
@@ -19,7 +18,7 @@ export default function Home() {
         <HeaderContent />
         <BannerHeader />
       </div>
-      <div className="body-section m-0 py-0 px-24 xs:px-4 flex flex-col justify-center items-center gap-10 bg-white">
+      <div className="body-section m-0 py-0 px-24 xs:px-4 flex flex-col justify-center items-center gap-10 xs:gap-5 bg-white">
         <PopularCategories />
         <FreshlyArrived />
         <BannerInContent />

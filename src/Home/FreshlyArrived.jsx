@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ProductItem from "./ProductItem";
 import "../resources/scss/content.scss";
-import { Row } from "antd";
 
 export default function FreshlyArrived() {
   const [hovered, setHovered] = useState(0);
@@ -12,20 +11,15 @@ export default function FreshlyArrived() {
   }
   return (
     <div className="freshly-arrived-section">
-      <div className="product-header flex py-7 px-2.5 xs:justify-start justify-between xs:flex-col xs:items-start items-center w-full xs:gap-5">
-        <div className="text-nowrap  text-black_200 text-[32px] font-normal capitalize">
+      <div className="product-header flex py-7 px-2.5 justify-between items-center w-full xs:gap-2.5">
+        <div className="text-nowrap text-black_200 xs:text-2xl text-[32px] font-normal capitalize">
           Freshly arrived
         </div>
-        <div className="flex xs:justify-between xs:w-full justify-end items-center xs:gap-2 gap-10">
-          <div></div>
-          <div className="xs:flex xs:justify-between">
-            <button className="bg-primary xs:mr-2 mr-[13.85px] text-white_100 py-[15px] px-5 items-center rounded-[10px] text-base	 leading-[100%] tracking-[1.12px] uppercase">
-              View all
-            </button>
-          </div>
-        </div>
+        <button className="bg-primary text-white_100 xs:p-2 p-5 text-center rounded-[10px] text-base xs:text-sm leading-[100%] tracking-[1.12px] uppercase">
+          View all
+        </button>
       </div>
-      <Row className="w-full relative" gutter={30}>
+      <div className="w-full relative flex flex-wrap">
         {data.map((item) => {
           return (
             <ProductItem
@@ -36,7 +30,7 @@ export default function FreshlyArrived() {
             />
           );
         })}
-      </Row>
+      </div>
     </div>
   );
 }

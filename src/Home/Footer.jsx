@@ -33,8 +33,8 @@ export default function Footer() {
   return (
     <div className="footer-section">
       <div className="footer-looking-for flex py-2.5 px-0 flex-col items-start gap-5">
-        <div className=" text-black_200 text-[32px] font-normal capitalize">
-          People are also looking for
+        <div className="text-nowrap text-black_200 xs:text-2xl text-[32px] font-normal capitalize">
+          Peoper are looking before
         </div>
         <div className="looking-for-info mt-5 flex items-center self-stretch gap-[15px] flex-wrap">
           <span>Blue diamon almonds</span>

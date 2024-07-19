@@ -1,31 +1,10 @@
 import React from "react";
 import "../resources/scss/content.scss";
-import { Col, Row } from "antd";
 import banner_ad_1 from "../resources/img/banner_ad_1.jpg";
 import banner_ad_2 from "../resources/img/banner_ad_2.png";
 import banner_ad_3 from "../resources/img/banner_ad_3.png";
 
 export default function BannerInContent() {
-  const data = [
-    {
-      banner: banner_ad_1,
-      title: "Items on SALE",
-      description: "Discounts up to 30%",
-      text_link: "shop now",
-    },
-    {
-      banner: banner_ad_2,
-      title: "Combo offer",
-      description: "save up to 100%",
-      text_link: "shop now",
-    },
-    {
-      banner: banner_ad_3,
-      title: "Discount Coupons",
-      description: "Discounts up to 30%",
-      text_link: "shop now",
-    },
-  ];
   return (
     <div className="banner-in-content flex xs:flex-col flex-row w-full py-0 px-2.5 gap-[30px] flex-nowrap">
       <div
@@ -39,7 +18,6 @@ export default function BannerInContent() {
           <div className="description">Discounts up to 30%</div>
           <div className="link">shop now</div>
         </div>
-        ;
       </div>
       <div className="flex flex-col basis-[40%] gap-[30px] flex-nowrap">
         <div
